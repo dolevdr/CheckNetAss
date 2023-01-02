@@ -1,0 +1,16 @@
+.strongNumbers{
+    position: relative;
+    left: -50px;
+    top:-50px;
+    float: left;
+    margin: 50px;
+    border: 1px solid black
+}
+.text{
+    font-size: smaller;
+    position: relative;
+    left: -30px;
+    top:-120px;
+    float: left;margin: 30px;
+    clear: right;
+}

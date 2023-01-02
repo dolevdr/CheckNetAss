@@ -1,0 +1,42 @@
+<h1>חיפוש תוצאות לוטו</h1>
+<div>
+  <label for="LotteryNumber">מספר הגרלה:</label><br />
+  <input
+    type="number"
+    #LotteryNumber
+    min="2500"
+    max="3540"
+    placeholder="הקלד מספר הגרלה"
+    [ngStyle]="{ width: '115px' }"
+  />
+</div>
+
+<div>
+  <input
+    type="submit"
+    value="שלח"
+    (click)="handleSubmit(LotteryNumber.value)"
+  />
+</div>
+<br />
+<div *ngIf="res">
+    <hr style="border: 1px solid black" />
+    <br />
+    <div style="position: relative; left: 10px">
+    <b>:{{ LotteryNumber.value }} תוצאות הגרלת לוטו מספר</b>
+
+    <div>{{ res.date | toHebrew }}</div>
+
+    <div>המספרים הם:</div>
+    <div class="strongNumbers">
+      {{ res.numbers }}
+    </div>
+
+    <div class="strongNumbers">{{ res.strong }}</div>
+    <div style="clear: both"></div>
+
+    <div class="text">תוצאת הגרלת לוטו</div>
+    <div class="text">המספר החזק</div>
+    <!-- add result from django -->
+  </div>
+</div>
